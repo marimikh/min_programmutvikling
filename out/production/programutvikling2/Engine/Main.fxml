@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.net.*?>
+<?import javafx.scene.canvas.Canvas?>
+
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.geometry.Insets?>
+
+
+<!--   Heller lage en group som har gridpane bakerst, slik at vi kan ha et canvas som ligger over? -->
+<GridPane xmlns:fx="http://javafx.com/fxml" fx:controller="Engine.MainController">
+    <VBox prefWidth="800" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2" GridPane.rowSpan="1">
+        <MenuBar fx:id="menuBar" useSystemMenuBar="true">
+            <menus>
+                <Menu text="Fil">
+                    <items>
+                        <MenuItem text="Lukk" onAction="#exitEvent" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </VBox>
+    <!--  Canvas -->
+    <HBox styleClass="graphics" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.columnSpan="1" GridPane.rowSpan="1">
+        <Canvas fx:id="graphics"  width="600" height="600" />
+    </HBox>
+
+</GridPane>
